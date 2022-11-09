@@ -1,0 +1,25 @@
+package entities;
+
+public class Account {
+
+	private int accountNumber;
+	private String accountHolder;
+	private double balance;
+	double amount = 0;
+	
+	public double deposit() {
+		return this.balance + amount;
+	}
+	public double withdraw() {
+		return this.balance - amount - 5.00;
+	}
+	public String toString() {
+		return "Account " 
+				+ this.accountNumber
+				+ ", Holder: "
+				+ this.accountHolder
+				+ ", Balance: $ "
+				+ String.format("%.2f%n", this.balance);
+				
+	}
+}

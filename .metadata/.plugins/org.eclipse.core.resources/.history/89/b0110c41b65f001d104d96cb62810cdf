@@ -1,0 +1,58 @@
+package entities;
+
+public class Account {
+
+	private int accountNumber;
+	private String accountHolder;
+	private double balance;
+
+	public Account() {
+
+	}
+
+	public Account(int accountNumber, String accountHolder, double balance) {
+		this.accountNumber = accountNumber;
+		this.accountHolder = accountHolder;
+		this.balance = balance;
+	}
+
+	public int getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public String getAccountHolder() {
+		return accountHolder;
+	}
+
+	public void setAccountHolder(String accountHolder) {
+		this.accountHolder = accountHolder;
+	}
+
+
+	public double getWithdraw() {
+		return withdraw;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+	public double deposit() {
+		return this.balance + deposit;
+	}
+	public double withdraw() {
+		return this.balance - withdraw - 5.00;
+	}
+	public String toString() {
+		return "Account " 
+				+ this.accountNumber
+				+ ", Holder: "
+				+ this.accountHolder
+				+ ", Balance: $ "
+				+ String.format("%.2f%n", this.balance);
+				
+	}
+}

@@ -1,0 +1,27 @@
+package entities;
+
+public class Account {
+	private int accountNumber;
+	private String accountHolder;
+	private double balance;
+
+	public Account(int accountNumber, String accountHolder, double balance) {
+		this.accountNumber = accountNumber;
+		this.accountHolder = accountHolder;
+		this.balance = balance;
+	}
+	public Account(int accountNumber, String accountHolder) {
+		this.accountNumber = accountNumber;
+		this.accountHolder = accountHolder;
+	}
+
+	public String toString() {
+		return "Account " 
+				+ this.accountNumber
+				+ ", Holder: "
+				+ this.accountHolder
+				+ ", Balance: $ "
+				+ String.format("%.2f%n", this.balance);
+				
+	}
+}
