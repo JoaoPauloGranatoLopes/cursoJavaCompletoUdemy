@@ -23,7 +23,7 @@ public class Program {
 
 		System.out.println("Enter client data:");
 		System.out.print("Name: ");
-		String name1 = sc.nextLine();
+		String clientName = sc.nextLine();
 
 		System.out.print("Email: ");
 		String email = sc.next();
@@ -31,7 +31,7 @@ public class Program {
 		System.out.print("Birth date (DD/MM/YYYY): ");
 		Date birthDate = sdf.parse(sc.next());
 
-		Client client = new Client(name1, email, birthDate);
+		Client client = new Client(clientName, email, birthDate);
 
 		System.out.println("Enter order data:");
 		System.out.print("Status:");
