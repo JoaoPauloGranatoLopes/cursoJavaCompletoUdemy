@@ -24,48 +24,42 @@ public class Program {
 			System.out.println("Tax payer #" + i + " data:");
 			System.out.print("Individual or company (i/c)? ");
 			char ch = sc.next().charAt(0);
+			System.out.print("Name: ");
+			String name = sc.next();
+			System.out.print("Annual income: ");
+			Double annualIncome = sc.nextDouble();
 
 			if (ch == 'i') {
-				System.out.print("Name: ");
-				String name = sc.next();
-				System.out.print("Annual income: ");
-				Double annualIncome = sc.nextDouble();
 				System.out.print("Health expenditures: ");
 				Double healthExpenditures = sc.nextDouble();
 
 				Individual individual = new Individual(name, annualIncome, healthExpenditures);
 				list.add(individual);
 
-			}
-				if (ch == 'c') {
-					System.out.print("Name: ");
-					String name = sc.next();
-					System.out.print("Annual income: ");
-					Double annualIncome = sc.nextDouble();
-					System.out.print("Number of employees: ");
-					Integer numberEmployees = sc.nextInt();
+			} else {
+				System.out.print("Number of employees: ");
+				Integer numberEmployees = sc.nextInt();
 
-					Company company = new Company(name, annualIncome, numberEmployees);
-					list.add(company);
+				Company company = new Company(name, annualIncome, numberEmployees);
+				list.add(company);
 
-				}
 			}
-			System.out.println();
-			System.out.println("TAXES PAID:");
-			for (TaxPayer taxPayer : list) {
-			
-				System.out.println(taxPayer.getName() + ": $ " + String.format("%.2f" , taxPayer.tax()));
-			}
+		}
+		System.out.println();
+		System.out.println("TAXES PAID:");
+		for (TaxPayer taxPayer : list) {
 
-			System.out.println();
-			double sum = 0.0;
-			for (TaxPayer taxPayer : list) {
-				sum += taxPayer.tax();
-				
-			}
-			System.out.print("TOTAL TAXES: $  " + sum);
-			sc.close();
+			System.out.println(taxPayer.getName() + ": $ " + String.format("%.2f", taxPayer.tax()));
 		}
 
+		System.out.println();
+		double sum = 0.0;
+		for (TaxPayer taxPayer : list) {
+			sum += taxPayer.tax();
+
+		}
+		System.out.print("TOTAL TAXES: $  " + String.format("%.2f", sum));
+		sc.close();
 	}
 
+}
