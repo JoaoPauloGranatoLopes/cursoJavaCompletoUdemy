@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		int idade = 72;
+		int idade = 73;
 		String nome = "João Paulo Granato Lopes";
 		double altura = 1.64;
 		char sexo = 'M';

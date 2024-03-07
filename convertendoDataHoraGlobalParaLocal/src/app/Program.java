@@ -11,6 +11,7 @@ public class Program {
 
 
 		
+		Instant d06;
 		/*for(String s : ZoneId.getAvailableZoneIds()) {
 			System.out.println(s);
 		}*/
@@ -23,6 +24,7 @@ public class Program {
 		System.out.println("r2 = " + r2);
 		System.out.println("r3 = " + r3);
 		System.out.println("r4 = " + r4);
+		
 		
 		System.out.println("d04 dia = " + d04.getDayOfMonth());
 		System.out.println("d04 mês = " + d04.getMonthValue());

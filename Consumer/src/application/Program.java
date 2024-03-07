@@ -16,9 +16,13 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 
-		list.forEach(p -> p.setPrice(p.getPrice() * 1.1));
+		//list.forEach(p -> p.setPrice(p.getPrice() * 1.1));
 
 		list.forEach(System.out::println);
+		
+		/*for(Product p : list) {
+			System.out.println(p);
+		}*/
 
 	}
 
